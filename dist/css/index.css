@@ -1,0 +1,493 @@
+@charset "UTF-8";
+html, body, div, a, p, span, ul, li {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.banner, .about-us .content .btn, .btn-module a, .campuses .content .pointer span, .professor .content .area .pointer span {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+
+.wap {
+  max-width: 10rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.header {
+  padding: 0 0.26667rem;
+  height: 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .logo .nuoda {
+  width: 2.05333rem;
+  height: 0.69333rem;
+  padding-right: 0.26667rem;
+  border-right: 1px solid #cccccc;
+  margin-right: 0.2rem;
+}
+
+.header .logo .eu {
+  width: 2rem;
+  height: 0.50667rem;
+}
+
+.header .header-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header-right .icon {
+  width: 0.66667rem;
+  height: 0.66667rem;
+  background: url("../images/tel.png") no-repeat center;
+  background-size: 100% 100%;
+  margin-right: 7px;
+}
+
+.header .header-right .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header .header-right .text .hotline {
+  font-size: 0.24rem;
+  color: #666666;
+}
+
+.header .header-right .text .number {
+  font-size: 0.45333rem;
+  color: #f0552f;
+}
+
+.title-module {
+  height: 0.82667rem;
+  font-size: 0.53333rem;
+  color: #333333;
+  text-align: center;
+  position: relative;
+}
+
+.title-module strong {
+  font-weight: bold;
+  color: #167e48;
+}
+
+.title-module .cn {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.title-module .en {
+  color: #eeeeee;
+  position: absolute;
+  top: 0.29333rem;
+}
+
+.title-module .cn, .title-module .en {
+  left: 0;
+  right: 0;
+  margin: auto;
+  line-height: 0.53333rem;
+}
+
+.about-us {
+  padding: 0.8rem 0.26667rem 0;
+}
+
+.about-us .carousel {
+  margin-top: 0.53333rem;
+}
+
+.about-us .content {
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  padding: 0.8rem 0.53333rem 0.65333rem;
+  text-align: center;
+}
+
+.about-us .content .detail-title {
+  font-size: 0.4rem;
+  text-align: center;
+  margin-bottom: 0.62667rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 0.73333rem;
+}
+
+.about-us .content .detail-title .left {
+  width: 4.05333rem;
+  height: 0.73333rem;
+  background-color: #167e48;
+  color: #ffffff;
+  border-radius: 0.28rem 0 0 0.28rem;
+}
+
+.about-us .content .detail-title .right {
+  width: 3.13333rem;
+  height: 0.73333rem;
+  border-radius: 0 0.28rem 0.28rem 0;
+  border: solid 1px #167e48;
+  color: #167e48;
+}
+
+.about-us .content .text {
+  font-size: 0.32rem;
+  color: #333333;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.about-us .content .btn {
+  background-color: #f0552f;
+  border: solid 1px #f0552f;
+  font-size: 0.34667rem;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 30px;
+  width: 4rem;
+  height: 0.74667rem;
+  line-height: 0.74667rem;
+  border-radius: 0.37333rem;
+  cursor: pointer;
+}
+
+.btn-module {
+  text-align: center;
+}
+
+.btn-module a {
+  width: 3.46667rem;
+  height: 0.74667rem;
+  line-height: 48px;
+  border-radius: 0.37333rem;
+  border: solid 1px #f0552f;
+  font-size: 0.34667rem;
+  margin-right: 0.4rem;
+  color: #f0552f;
+}
+
+.btn-module a.active {
+  background-color: #f0552f;
+  color: #ffffff;
+}
+
+.btn-module a:last-child {
+  margin-right: 0;
+}
+
+/* 课程优势 */
+.course-advantage {
+  padding: 0.8rem 0.26667rem 0.62667rem;
+}
+
+.course-advantage .content .advantage {
+  margin-top: 0.53333rem;
+  margin-bottom: 0.53333rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 0.26667rem;
+  grid-row-gap: 0.26667rem;
+}
+
+.course-advantage .content .advantage li {
+  width: 4.6rem;
+  height: 3.2rem;
+  background-color: #ffffff;
+  border-radius: 0.10667rem;
+  border: solid 1px rgba(221, 221, 221, 0.9);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.course-advantage .content .advantage li span {
+  font-size: 0.34667rem;
+  line-height: 0.34667rem;
+  color: #333333;
+  margin-top: 0.4rem;
+}
+
+.course-advantage .content .text {
+  color: #333333;
+  font-size: 0.34667rem;
+  text-align: left;
+  margin-bottom: 0.66667rem;
+}
+
+/* 校区 */
+.campuses {
+  width: 100%;
+  height: 10.66667rem;
+  background: url("../images/bg_1.png") no-repeat center;
+  background-size: 100% 100%;
+  padding: 0.8rem 0.26667rem 0.62667rem;
+}
+
+.campuses .content .carousel {
+  margin-top: 0.53333rem;
+  margin-bottom: 0.53333rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.campuses .content .carousel li {
+  width: 4.6rem;
+  height: 6.13333rem;
+  background-size: 100% 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.campuses .content .carousel li .school-name {
+  width: 2.93333rem;
+  height: 1.6rem;
+  background-color: #167e48;
+  border-radius: 0.06667rem;
+  font-size: 0.26667rem;
+  color: #eeeeee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.campuses .content .pointer {
+  text-align: center;
+}
+
+.campuses .content .pointer span {
+  width: 0.26667rem;
+  height: 0.26667rem;
+  background-color: #167e48;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 0.13333rem;
+}
+
+.campuses .content .pointer span.active {
+  width: 0.53333rem;
+  border-radius: 0.13333rem;
+}
+
+/* 课程介绍 */
+.course-introduce {
+  width: 100%;
+  padding-top: 0.65333rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.course-introduce .text {
+  color: #333333;
+  font-size: 0.34667rem;
+  text-align: center;
+  margin: 0.49333rem auto 0.77333rem;
+}
+
+.course-introduce .course-module {
+  width: 100%;
+  height: 11.72rem;
+  background: url("../images/bg_2.png") no-repeat center bottom;
+}
+
+.course-introduce .btn-module {
+  margin-top: 0.66667rem;
+}
+
+/* 教授 */
+.professor {
+  width: 100%;
+  height: 10.66667rem;
+  background: url("../images/bg_3.png") no-repeat center;
+  background-size: 100% 100%;
+  padding-top: 0.53333rem;
+  margin-top: 0.8rem;
+}
+
+.professor .title-module .cn {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.professor .title-module .en {
+  color: rgba(255, 255, 255, 0.12);
+}
+
+.professor .content .area {
+  margin-right: -30px;
+  margin-top: 120px;
+  margin-bottom: 40px;
+}
+
+.professor .content .area li {
+  width: 6.93333rem;
+  height: 5.33333rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0 0.4rem;
+  text-align: center;
+  background-size: 100% 100%;
+  margin: 0 auto;
+}
+
+.professor .content .area li .avatar {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-top: -0.8rem;
+}
+
+.professor .content .area li .name {
+  font-size: 0.4rem;
+  line-height: 0.4rem;
+  color: #333333;
+  margin-top: 0.24rem;
+}
+
+.professor .content .area li .name span {
+  font-size: 14px;
+  color: #999999;
+}
+
+.professor .content .area li .honor {
+  margin-top: 0.2rem;
+  font-size: 0.26667rem;
+  line-height: 0.26667rem;
+}
+
+.professor .content .area li .honor strong {
+  display: block;
+  color: #167e48;
+  font-weight: normal;
+}
+
+.professor .content .area li .honor span {
+  display: block;
+  color: #999999;
+  margin-top: 0.13333rem;
+}
+
+.professor .content .area li .experience {
+  margin-top: 40px;
+}
+
+.professor .content .area li .experience .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.professor .content .area li .experience .item .icon {
+  width: 0.24rem;
+  height: 0.24rem;
+  background: url("../images/arrows.png") no-repeat;
+  margin-right: 6px;
+  margin-top: 5px;
+}
+
+.professor .content .area li .experience .item p {
+  width: 5.62667rem;
+  line-height: 1.5;
+  text-align: left;
+  font-size: 0.26667rem;
+  color: #333333;
+}
+
+.professor .content .area .pointer {
+  text-align: center;
+  margin-top: 0.32rem;
+}
+
+.professor .content .area .pointer span {
+  width: 0.26667rem;
+  height: 0.26667rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 0.13333rem;
+}
+
+.professor .content .area .pointer span.active {
+  width: 0.53333rem;
+  border-radius: 0.13333rem;
+}
+
+.professor .content .btn-module a {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.professor .content .btn-module a.active {
+  border: 1px solid #f0552f;
+}
