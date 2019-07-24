@@ -4,10 +4,27 @@ html, body, div, a, p, span, ul, li {
           box-sizing: border-box;
 }
 
-.banner, .about-us .content .btn, .btn-module a, .campuses .content .pointer span, .professor .content .area .pointer span {
+li {
+  list-style-type: none;
+}
+
+.banner, .swiper-pagination span, .about-us .content .btn, .btn-module a, .professor .content .area .pointer span {
   display: inline-block;
   *zoom: 1;
   *display: inline;
+}
+
+.application .process .step .step-detail .require {
+  zoom: 1;
+}
+
+.application .process .step .step-detail .require:after {
+  clear: both;
+}
+
+.application .process .step .step-detail .require:before, .application .process .step .step-detail .require:after {
+  content: "";
+  display: table;
 }
 
 .wap {
@@ -124,12 +141,48 @@ html, body, div, a, p, span, ul, li {
   line-height: 0.53333rem;
 }
 
-.about-us {
-  padding: 0.8rem 0.26667rem 0;
+/* 指示器 */
+.swiper-pagination {
+  right: 0;
+  margin: auto;
+  z-index: 90;
 }
 
-.about-us .carousel {
-  margin-top: 0.53333rem;
+.swiper-pagination span {
+  width: 0.26667rem;
+  height: 0.26667rem;
+  background-color: #167e48;
+  opacity: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 0.13333rem;
+}
+
+.swiper-pagination span.swiper-pagination-bullet-active {
+  width: 0.53333rem;
+  border-radius: 0.13333rem;
+}
+
+.about-us {
+  padding-top: 0.78667rem;
+}
+
+.about-us .swiper-container {
+  height: 6.73333rem;
+  margin: 0.53333rem 0.13333rem 0;
+  position: relative;
+}
+
+.about-us .swiper-container .swiper-slide.swiper-slide-active {
+  margin-right: 0.13333rem;
+}
+
+.about-us .swiper-container .swiper-pagination {
+  bottom: 0.53333rem;
+}
+
+.about-us .swiper-container .swiper-pagination span {
+  background-color: #ffffff;
 }
 
 .about-us .content {
@@ -138,6 +191,7 @@ html, body, div, a, p, span, ul, li {
   border-bottom: 1px solid #dddddd;
   padding: 0.8rem 0.53333rem 0.65333rem;
   text-align: center;
+  margin: 0 0.26667rem;
 }
 
 .about-us .content .detail-title {
@@ -273,9 +327,13 @@ html, body, div, a, p, span, ul, li {
   padding: 0.8rem 0.26667rem 0.62667rem;
 }
 
-.campuses .content .carousel {
-  margin-top: 0.53333rem;
+.campuses .content .swiper-container {
+  height: 7.46667rem;
+  padding-top: 0.53333rem;
   margin-bottom: 0.53333rem;
+}
+
+.campuses .content .swiper-container .swiper-slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -284,28 +342,24 @@ html, body, div, a, p, span, ul, li {
           justify-content: space-between;
 }
 
-.campuses .content .carousel li {
+.campuses .content .swiper-container .swiper-slide .school {
   width: 4.6rem;
   height: 6.13333rem;
-  background-size: 100% 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  position: relative;
 }
 
-.campuses .content .carousel li .school-name {
+.campuses .content .swiper-container .swiper-slide .school .school-name {
   width: 2.93333rem;
   height: 1.6rem;
   background-color: #167e48;
   border-radius: 0.06667rem;
   font-size: 0.26667rem;
   color: #eeeeee;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,24 +373,15 @@ html, body, div, a, p, span, ul, li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.campuses .content .pointer {
   text-align: center;
 }
 
-.campuses .content .pointer span {
-  width: 0.26667rem;
-  height: 0.26667rem;
-  background-color: #167e48;
-  border-radius: 50%;
-  cursor: pointer;
-  margin-right: 0.13333rem;
+.campuses .content .swiper-container .swiper-slide.swiper-slide-active {
+  margin-right: 0.26667rem;
 }
 
-.campuses .content .pointer span.active {
-  width: 0.53333rem;
-  border-radius: 0.13333rem;
+.campuses .content .swiper-container .swiper-pagination {
+  bottom: 0;
 }
 
 /* 课程介绍 */
@@ -351,7 +396,8 @@ html, body, div, a, p, span, ul, li {
   color: #333333;
   font-size: 0.34667rem;
   text-align: center;
-  margin: 0.49333rem auto 0.77333rem;
+  margin: 0.4rem auto 0.66667rem;
+  padding: 0 0.26667rem;
 }
 
 .course-introduce .course-module {
@@ -381,6 +427,107 @@ html, body, div, a, p, span, ul, li {
 
 .professor .title-module .en {
   color: rgba(255, 255, 255, 0.12);
+}
+
+.professor .swiper-container {
+  width: 6.93333rem;
+  height: 7.52rem;
+  margin-bottom: 0.50667rem;
+}
+
+.professor .swiper-container .swiper-wrapper {
+  width: 100%;
+  height: 5.33333rem;
+}
+
+.professor .swiper-container .swiper-slide {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0 0.4rem;
+  text-align: center;
+  background-size: 100% 100%;
+  margin-top: 1.6rem;
+}
+
+.professor .swiper-container .swiper-slide .avatar {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-top: -0.8rem;
+}
+
+.professor .swiper-container .swiper-slide .name {
+  font-size: 0.4rem;
+  line-height: 0.4rem;
+  color: #333333;
+  margin-top: 0.24rem;
+}
+
+.professor .swiper-container .swiper-slide .name span {
+  font-size: 14px;
+  color: #999999;
+}
+
+.professor .swiper-container .swiper-slide .honor {
+  margin-top: 0.2rem;
+  font-size: 0.26667rem;
+  line-height: 0.26667rem;
+}
+
+.professor .swiper-container .swiper-slide .honor strong {
+  display: block;
+  color: #167e48;
+  font-weight: normal;
+}
+
+.professor .swiper-container .swiper-slide .honor span {
+  display: block;
+  color: #999999;
+  margin-top: 0.13333rem;
+}
+
+.professor .swiper-container .swiper-slide .experience {
+  margin-top: 40px;
+}
+
+.professor .swiper-container .swiper-slide .experience .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.professor .swiper-container .swiper-slide .experience .item .icon {
+  width: 0.24rem;
+  height: 0.24rem;
+  background: url("../images/arrows.png") no-repeat;
+  margin-right: 6px;
+  margin-top: 5px;
+}
+
+.professor .swiper-container .swiper-slide .experience .item p {
+  width: 5.62667rem;
+  line-height: 1.5;
+  text-align: left;
+  font-size: 0.26667rem;
+  color: #333333;
+}
+
+.professor .swiper-container .swiper-pagination {
+  bottom: 0;
+}
+
+.professor .swiper-container .swiper-pagination span {
+  background-color: #ffffff;
+}
+
+.professor .btn-module a {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.professor .btn-module a.active {
+  border: 1px solid #f0552f;
 }
 
 .professor .content .area {
@@ -483,11 +630,245 @@ html, body, div, a, p, span, ul, li {
   border-radius: 0.13333rem;
 }
 
-.professor .content .btn-module a {
+/* 校友 */
+.schoolmate {
+  width: 100%;
+  padding-top: 0.66667rem;
+}
+
+.schoolmate .content {
+  width: 7.93333rem;
+  margin: 0.53333rem auto;
+}
+
+.schoolmate .content .swiper-container {
+  height: 7.13333rem;
+  margin-bottom: 0.53333rem;
+}
+
+.schoolmate .content .swiper-container .swiper-slide.swiper-slide-active {
+  margin-right: 0.13333rem;
+}
+
+.schoolmate .content .swiper-container .swiper-slide img {
+  margin-bottom: 0.08rem;
+}
+
+.schoolmate .content .swiper-container .swiper-pagination {
+  bottom: 0;
+}
+
+.schoolmate .text {
+  font-size: 0.32rem;
+  color: #333333;
+  line-height: 1.5;
+  padding: 0 0.53333rem;
+  margin-bottom: 0.53333rem;
+}
+
+/* 课程申请 */
+.application {
+  width: 100%;
+  height: 17.33333rem;
+  background: url("../images/bg_4.png") no-repeat center;
+  background-size: 100% 100%;
+  margin-top: 0.8rem;
+  padding: 0.53333rem 0.26667rem 0.62667rem;
+}
+
+.application .title-module .cn {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.application .title-module .en {
+  color: rgba(255, 255, 255, 0.16);
+}
+
+.application .process {
+  width: 6.13333rem;
+  margin-top: 0.53333rem;
+  padding-bottom: 0.8rem;
+  float: right;
+}
+
+.application .process .process-title {
+  width: 2.26667rem;
+  height: 0.93333rem;
+  line-height: 0.93333rem;
+  background-color: #f0552f;
+  font-size: 0.32rem;
+  color: #ffffff;
+  text-align: center;
+  margin-left: 1.97333rem;
+  margin-bottom: 0.38667rem;
+  position: relative;
+}
+
+.application .process .process-title::after {
+  content: '';
+  height: 0;
+  width: 0;
+  border-top: 0.26667rem solid #f0552f;
+  border-left: 0.13333rem solid transparent;
+  border-right: 0.13333rem solid transparent;
+  position: absolute;
+  bottom: -0.26667rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.application .process .step {
+  height: 1.81333rem;
+  border: solid 1px rgba(255, 255, 255, 0.6);
+  padding: 0.4rem 0.69333rem;
+  margin-top: 0.26667rem;
+}
+
+.application .process .step .number {
+  font-size: 0.96rem;
+  line-height: 0.96rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.6);
+  float: left;
+}
+
+.application .process .step .step-detail {
+  float: right;
+  color: #ffffff;
+}
+
+.application .process .step .step-detail .detail-title {
+  font-size: 0.4rem;
+  line-height: 0.4rem;
+}
+
+.application .process .step .step-detail .detail-title strong {
+  font-weight: bold;
+}
+
+.application .process .step .step-detail .detail-title span {
+  font-size: 0.32rem;
+}
+
+.application .process .step .step-detail .require {
+  margin-top: 0.13333rem;
+}
+
+.application .process .step .step-detail .require span {
+  float: left;
+  color: #ffffff;
+  padding-left: 0.13333rem;
+  margin-right: 0.13333rem;
+  font-size: 0.32rem;
+  line-height: 0.37333rem;
+  position: relative;
+}
+
+.application .process .step .step-detail .require span:before {
+  display: block;
+  content: '';
+  width: 0.08rem;
+  height: 0.08rem;
+  border-radius: 50%;
+  background: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.application .apply-require {
+  clear: both;
+  margin-bottom: 0.4rem;
+}
+
+.application .apply-require .item {
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+
+.application .apply-require .item .item-title {
+  font-size: 0.45333rem;
+  line-height: 0.45333rem;
+  margin-bottom: 0.24rem;
+}
+
+.application .apply-require .item li {
+  font-size: 0.30667rem;
+  line-height: 0.30667rem;
+}
+
+.application .btn-module {
+  clear: both;
+}
+
+.application .btn-module a {
   border: 1px solid #ffffff;
   color: #ffffff;
 }
 
-.professor .content .btn-module a.active {
+.application .btn-module a.active {
   border: 1px solid #f0552f;
+}
+
+.footer {
+  width: 100%;
+  height: 1.33333rem;
+  background-color: #333333;
+  color: rgba(250, 250, 250, 0.4);
+  text-align: center;
+  font-size: 0.26667rem;
+  line-height: 0.26667rem;
+  padding-top: 0.26667rem;
+}
+
+.footer p {
+  margin-bottom: 0.13333rem;
+}
+
+.footer-fixed-site {
+  width: 100%;
+  height: 1.28rem;
+}
+
+.footer-fixed {
+  width: 10rem;
+  height: 1.28rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+}
+
+.footer-fixed a {
+  width: 50%;
+  background-color: #3f92e6;
+  font-size: 0.4rem;
+  color: #ffffff;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-fixed a:first-child {
+  background-color: #f0552f;
+}
+
+.footer-fixed a span {
+  margin-left: 0.16rem;
 }

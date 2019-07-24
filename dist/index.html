@@ -6,6 +6,9 @@
   <link rel="stylesheet" type="text/css" href="css/base.css">
   <script type="text/javascript" src="http://img.thea.cn/public/js/thea.debug.js"></script>
   <link rel="stylesheet" type="text/css" href="css/index.css">
+
+  <link rel="stylesheet" type="text/css" href="https://img.thea.cn/public/css/swiper-3.3.1.min.css">
+  <script type="text/javascript" src="https://img.thea.cn/public/js/swiper-3.3.1.min.js"></script>
 </head>
 <body>
 
@@ -38,22 +41,37 @@
 
       <p class="en">ABOUT EU BUSINESS SCHOOL</p>
     </div>
-    <div class="carousel">
-      <img src="images/eu-school_1.png" alt="">
+    <!-- 轮播图 -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/eu-school_1.png">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/eu-school_1.png">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/eu-school_1.png">
+        </div>
+      </div>
+      <!-- 如果需要分页器 -->
+      <div class="swiper-pagination"></div>
     </div>
+
     <div class="content">
       <div class="detail-title">
         <span class="left">全球DBA院校22强</span>
         <span class="right">学制：3-5年</span>
       </div>
-      <p class="text">
-        EU商学院1973年成立于瑞士，是一所创新型私立贵族商学院，在巴塞罗那、日内瓦、蒙特勒、慕尼黑均设有校区，此外还开辟了网络教学。我们提供大学预科以及学士、硕士、MBA、DBA和继续教育课程，专注于工商管理、传播学、旅游管理、国际商务、市场营销、金融、数字商业和创业等领域，小班授课，注重师生互动。我们倡导立足于实战经验的务实商科教学法，辅以EU商学院在全球范围内的人脉网络，助力学生在当今快速发展并全球化的商界实现职业生涯的突破。
-      </p>
-      <p class="text">
-        2018年，基于对国际地位、师资水平、校友在商业&学术领域的影响力认证，
-        EU商学院与哈佛商学院、IE商学院、曼彻斯特大学、华盛顿大学奥林商学院、马斯特里赫特管理学院等22所院校，
-        共同被 《CEO》 杂志评为全球首屈一指的提供DBA学位课程的院校。
-      </p>
+      <div class="text" id="schoolIntroduce">
+        <p>
+          EU商学院1973年成立于瑞士，是一所创新型私立贵族商学院，在巴塞罗那、日内瓦、蒙特勒、慕尼黑均设有校区，此外还开辟了网络教学。我们提供大学预科以及学士、硕士、MBA、DBA和继续教育课程，专注于工商管理、传播学、旅游管理、国际商务、市场营销、金融、数字商业和创业等领域，小班授课，注重师生互动。我们倡导立足于实战经验的务实商科教学法，辅以EU商学院在全球范围内的人脉网络，助力学生在当今快速发展并全球化的商界实现职业生涯的突破。
+        </p>
+        <p>
+          2018年，基于对国际地位、师资水平、校友在商业&学术领域的影响力认证，EU商学院与哈佛商学院、IE商学院、曼彻斯特大学、华盛顿大学奥林商学院、马斯特里赫特管理学院等22所院校，共同被 《CEO》
+          杂志评为全球首屈一指的提供DBA学位课程的院校。
+        </p>
+      </div>
       <a href="javascript:void (0)" class="btn">更多院校详情 >></a>
     </div>
   </div>
@@ -103,7 +121,7 @@
         </li>
       </ul>
 
-      <div class="text">
+      <div class="text" id="advantageIntroduce">
         <p>
           EU商学院DBA学位课程位列全球22强。
           从瑞士进入中国上海，历时10余年发展，
@@ -134,45 +152,45 @@
 
       <p class="en">FOUR STAR CAMPUSES</p>
     </div>
-
     <div class="content">
-      <div class="area">
-        <ul class="carousel">
-          <li style="background-image: url('images/barcelona.png')">
-            <div class="school-name">
-              Barcelona Campus
-              <span>巴塞罗那校区</span>
-              <span>（西班牙）</span>
+      <!-- 轮播图 -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="school" style="background-image: url('images/barcelona.png')">
+              <div class="school-name">
+                Barcelona Campus
+                <span>巴塞罗那校区</span>
+                <span>（西班牙）</span>
+              </div>
             </div>
-          </li>
-          <li style="background-image: url('images/geneva.png')">
-            <div class="school-name">
-              Geneva Campus
-              <span>(Switzerland)</span>
-              <span>日内瓦校区（瑞士）</span>
+            <div class="school" style="background-image: url('images/geneva.png')">
+              <div class="school-name">
+                Geneva Campus
+                <span>(Switzerland)</span>
+                <span>日内瓦校区（瑞士）</span>
+              </div>
             </div>
-          </li>
-        </ul>
-
-        <!--<li style="background-image: url('images/munich.png')">
-          <div class="school-name">
-            Munich Campus
-            (Germany)
-            <span>慕尼黑校区（德国）</span>
           </div>
-        </li>
-        <li style="background-image: url('images/montreux.png')">
-          <div class="school-name">
-            Montreux Campus
-            (Switzerland)
-            <span>蒙特勒校区（瑞士）</span>
+          <div class="swiper-slide">
+            <div class="school" style="background-image: url('images/munich.png')">
+              <div class="school-name">
+                Munich Campus
+                (Germany)
+                <span>慕尼黑校区（德国）</span>
+              </div>
+            </div>
+            <div class="school" style="background-image: url('images/montreux.png')">
+              <div class="school-name">
+                Montreux Campus
+                (Switzerland)
+                <span>蒙特勒校区（瑞士）</span>
+              </div>
+            </div>
           </div>
-        </li>-->
-
-        <div class="pointer">
-          <span class="active"></span>
-          <span></span>
         </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
       </div>
 
       <div class="btn-module">
@@ -185,15 +203,13 @@
   <!-- 课程介绍 -->
   <div class="course-introduce">
     <div class="title-module">
-      <p class="cn">四大<strong>明星校区</strong></p>
+      <p class="cn">DBA学位<strong>课程介绍</strong></p>
 
-      <p class="en">FOUR STAR CAMPUSES</p>
+      <p class="en">DBA CURRICULUM</p>
     </div>
 
     <div class="text">
-      EU商学院DBA学位课程学制3-5年，
-      由开学模块、学位课程模块、海外游学模块、博士论文模块以及瑞士毕业模块5大模块组成，
-      另有海外其他校区交换学习模块供学生选择。
+      EU商学院DBA学位课程学制3-5年，由开学模块、学位课程模块、海外游学模块、博士论文模块以及瑞士毕业模块5大模块组成，另有海外其他校区交换学习模块供学生选择。
     </div>
 
     <div class="course-module"></div>
@@ -211,17 +227,16 @@
 
       <p class="en">DBA PROFESSORS AND ADVISIORS</p>
     </div>
-
-    <div class="content">
-      <ul class="area">
-        <li>
+    <!-- 轮播图 -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
           <img src="images/Miguel A.Ariño .png" alt="Miguel A.Ariño" class="avatar">
           <div class="name">Miguel A.Ariño</div>
           <div class="honor">
             <strong>多变量统计学</strong>
             <span>EU商学院DBA特聘教授</span>
           </div>
-
           <div class="experience">
             <div class="item">
               <i class="icon"></i>
@@ -242,8 +257,8 @@
               </p>
             </div>
           </div>
-        </li>
-        <!--<li>
+        </div>
+        <div class="swiper-slide">
           <img src="images/Lin%20Zuoxin.png" alt="Miguel A.Ariño" class="avatar">
           <div class="name">
             林作新 <span>/ Lin Zuoxin</span>
@@ -279,8 +294,8 @@
               </p>
             </div>
           </div>
-        </li>
-        <li>
+        </div>
+        <div class="swiper-slide">
           <img src="images/Zhang Xin’an.png" alt="Miguel A.Ariño" class="avatar">
           <div class="name">
             林作新 <span>/ Zhang Xin’an</span>
@@ -312,21 +327,191 @@
               </p>
             </div>
           </div>
-        </li>-->
-
-        <div class="pointer">
-          <span class="active"></span>
-          <span></span>
         </div>
-      </ul>
+      </div>
+      <!-- 如果需要分页器 -->
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="btn-module">
+      <a href="javascript:void (0)">更多老师</a>
+      <a href="javascript:void (0)" class="active">免费试听课程</a>
+    </div>
+  </div>
 
-      <div class="btn-module">
-        <a href="javascript:void (0)">更多老师</a>
-        <a href="javascript:void (0)" class="active">免费试听课程</a>
+  <!-- 校友 -->
+  <div class="schoolmate">
+    <div class="title-module">
+      <p class="cn"><strong>校友活动</strong></p>
+
+      <p class="en">ALUMNI ACTIVITIES</p>
+    </div>
+
+    <div class="content">
+      <!-- 轮播图 -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/schoolmate_1.png">
+            <img src="images/schoolmate_2.png">
+            <img src="images/schoolmate_4.png">
+          </div>
+          <div class="swiper-slide">
+            <img src="images/schoolmate_3.png">
+            <img src="images/schoolmate_6.png">
+            <img src="images/schoolmate_5.png">
+          </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
       </div>
     </div>
+
+    <div class="text" id="schoolmateIntroduce">
+      <p>
+        在EU商学院，成长为企业家学者的校友们，平均年龄42.3岁，拥有15年以上的管理经验，毕业于各大高校的MBA、EMBA及其他专业硕士。
+      </p>
+      <p>
+        与企业家相比，除了财富他们更关注思想的进阶；与学者相比，他们不醉心于发表学术论文，而着力于用自己独特的观点和视角来解读商业问题，承担企业家学者的社会责任。
+      </p>
+    </div>
+
+    <div class="btn-module">
+      <a href="javascript:void (0)">了解更多</a>
+      <a href="javascript:void (0)" class="active">免费试听课程</a>
+    </div>
+  </div>
+
+  <!-- 课程申请 -->
+  <div class="application">
+    <div class="title-module">
+      <p class="cn">DBA课程申请</p>
+
+      <p class="en">APPLICATION</p>
+    </div>
+    <div class="process">
+      <div class="process-title">
+        <span>申请流程</span>
+      </div>
+      <div class="step">
+        <span class="number">01</span>
+        <div class="step-detail">
+          <div class="detail-title">
+            <strong>咨询</strong> <span>/ Consultation</span>
+          </div>
+          <div class="require">
+            <span>申请表</span>
+            <span>简历</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="step">
+        <span class="number">02</span>
+        <div class="step-detail">
+          <div class="detail-title">
+            <strong>面试 </strong><span>/ Assessment</span>
+          </div>
+          <div class="require">
+            <span>申请资料</span>
+            <span>报名费</span>
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <span class="number">03</span>
+        <div class="step-detail">
+          <div class="detail-title">
+            <strong>录取 </strong><span>/ Admission</span>
+          </div>
+          <div class="require">
+            <span>学费</span>
+            <span>开学素材</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="apply-require">
+      <ul class="item">
+        <div class="item-title">申请要求:</div>
+        <li>1. 硕士及以上学历，MBA/EMBA优先</li>
+        <li>2. 8年以上中高层管理工作经验</li>
+        <li>3. 企事业单位高层管理人员及企业主</li>
+      </ul>
+      <ul class="item">
+        <div class="item-title">授课地点：</div>
+        <li>EU商学院上海教学中心&深圳校友活动中心</li>
+      </ul>
+      <ul class="item">
+        <div class="item-title">授课语言：</div>
+        <li>中英文 （英文授课配同传翻译或根据教授要求配备交传翻译）</li>
+      </ul>
+    </div>
+
+    <div class="btn-module">
+      <a href="javascript:void (0)">报名申请</a>
+      <a href="javascript:void (0)" class="active">免费试听课程</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>版权所有深圳市诺达教育股份有限公司</p>
+    <p>©粤ICP备10032899号</p>
+  </div>
+
+  <div class="footer-fixed-site"></div>
+  <div class="footer-fixed">
+    <a href="javascript:;">
+      <img src="images/consult.png">
+      <span>在线咨询</span>
+    </a>
+    <a href="javascript:;">
+      <img src="images/appointment.png">
+      <span>名校预约</span>
+    </a>
   </div>
 </div>
 
+
+<script>
+  var mySwiper = new Swiper('.swiper-container', {
+    loop: true,
+
+    // 如果需要分页器
+    pagination: '.swiper-pagination',
+  })
+
+  function init(box, num) {
+    var len = num; //默认显示字数
+    var ctn = document.getElementById(box);  //获取div对象
+    var content = ctn.innerHTML;  //获取div里的内容
+
+    var div = document.createElement("div"); //创建<div>元素
+    var a = document.createElement("a"); //创建<a>元素
+    div.innerHTML = content.substring(0, len); //div里的内容为content的前len个字符
+
+    a.innerHTML = content.length > len ? "... 展开" : ""; //判断显示的字数是否大于默认显示的字数 来设置a的显示
+    a.href = "javascript:void(0)"; //让a链接点击不跳转
+
+    a.onclick = function () {
+      if (a.innerHTML.indexOf("展开") > 0) { //如果a中含有"展开"则显示"收起"
+        a.innerHTML = "<<&nbsp;收起";
+        div.innerHTML = content;
+      } else {
+        a.innerHTML = "... 展开";
+        div.innerHTML = content.substring(0, len);
+      }
+    }
+    // 设置div内容为空，span元素 a元素加入到div中
+    ctn.innerHTML = "";
+    ctn.appendChild(div);
+    ctn.appendChild(a);
+  }
+
+  init("schoolIntroduce", 171);
+  init("advantageIntroduce", 176);
+  init("schoolmateIntroduce", 100);
+</script>
 </body>
 </html>

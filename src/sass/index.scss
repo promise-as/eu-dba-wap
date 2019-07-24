@@ -8,8 +8,12 @@ $browser-default-font-size: 75px !default;
 
 $padding-size: pr(20px);
 
-html, body, div, a, p, span, ul, li{
+html, body, div, a, p, span, ul, li {
   box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
 }
 
 %in-b {
@@ -24,7 +28,19 @@ html, body, div, a, p, span, ul, li{
   overflow: hidden;
 }
 
-.wap{
+%clearfix {
+  zoom: 1;
+  &:after {
+    clear: both;
+  }
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+}
+
+.wap {
   max-width: pr(750px);
   margin: 0 auto;
   overflow: hidden;
@@ -69,7 +85,7 @@ html, body, div, a, p, span, ul, li{
         font-size: pr(18px);
         color: #666666;
       }
-      .number{
+      .number {
         font-size: pr(34px);
         color: $bg-color;
       }
@@ -77,7 +93,7 @@ html, body, div, a, p, span, ul, li{
   }
 }
 
-.banner{
+.banner {
   @extend %in-b;
 }
 
@@ -110,10 +126,44 @@ html, body, div, a, p, span, ul, li{
   }
 }
 
-.about-us{
-  padding: pr(60px) $padding-size 0;
-  .carousel{
-    margin-top: pr(40px);
+/* 指示器 */
+.swiper-pagination {
+  right: 0;
+  margin: auto;
+  z-index: 90;
+  span {
+    @extend %in-b;
+    width: pr(20px);
+    height: pr(20px);
+    background-color: #167e48;
+    opacity: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: pr(10px);
+    &.swiper-pagination-bullet-active {
+      width: pr(40px);
+      border-radius: pr(10px);
+    }
+  }
+}
+
+.about-us {
+  padding-top: pr(59px);
+  .swiper-container {
+    height: pr(505px);
+    margin: pr(40px) pr(10px) 0;
+    position: relative;
+    .swiper-slide{
+      &.swiper-slide-active{
+        margin-right: pr(10px);
+      }
+    }
+    .swiper-pagination {
+      bottom: pr(40px);
+      span {
+        background-color: #ffffff;
+      }
+    }
   }
   .content {
     border-left: 1px solid #dddddd;
@@ -121,6 +171,8 @@ html, body, div, a, p, span, ul, li{
     border-bottom: 1px solid #dddddd;
     padding: pr(60px) pr(40px) pr(49px);
     text-align: center;
+
+    margin: 0 $padding-size;
     .detail-title {
       font-size: pr(30px);
       text-align: center;
@@ -205,7 +257,7 @@ html, body, div, a, p, span, ul, li{
         height: pr(240px);
         background-color: #ffffff;
         border-radius: pr(8px);
-        border: solid 1px rgba(221,221,221, 0.9);
+        border: solid 1px rgba(221, 221, 221, 0.9);
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -228,6 +280,7 @@ html, body, div, a, p, span, ul, li{
   }
 }
 
+
 /* 校区 */
 .campuses {
   width: 100%;
@@ -236,46 +289,44 @@ html, body, div, a, p, span, ul, li{
   background-size: 100% 100%;
   padding: pr(60px) $padding-size pr(47px);
   .content {
-    .carousel {
-      margin-top: pr(40px);
+    .swiper-container{
+      height: pr(560px);
+      padding-top: pr(40px);
       margin-bottom: pr(40px);
-      display: flex;
-      justify-content: space-between;
-      li {
-        width: pr(345px);
-        height: pr(460px);
-        background-size: 100% 100%;
+      .swiper-slide{
         display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        .school-name {
-          width: pr(220px);
-          height: pr(120px);
-          background-color: #167e48;
-          border-radius: pr(5px);
-          font-size: pr(20px);
-          color: #eeeeee;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+        justify-content: space-between;
+        .school{
+          width: pr(345px);
+          height: pr(460px);
+          position: relative;
+          .school-name {
+            width: pr(220px);
+            height: pr(120px);
+            background-color: #167e48;
+            border-radius: pr(5px);
+            font-size: pr(20px);
+            color: #eeeeee;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          }
+        }
+        &.swiper-slide-active{
+          margin-right: pr(20px);
         }
       }
-    }
-    .pointer{
-      text-align: center;
-      span{
-        @extend %in-b;
-        width: pr(20px);
-        height: pr(20px);
-        background-color: #167e48;
-        border-radius: 50%;
-        cursor: pointer;
-        margin-right: pr(10px);
-        &.active{
-          width: pr(40px);
-          border-radius: pr(10px);
-        }
+
+      .swiper-pagination{
+        bottom: 0;
       }
     }
   }
@@ -285,16 +336,16 @@ html, body, div, a, p, span, ul, li{
 .course-introduce {
   width: 100%;
   //height: 804px;
-
   padding-top: pr(49px);
   box-sizing: border-box;
   .text {
     color: #333333;
     font-size: pr(26px);
     text-align: center;
-    margin: pr(37px) auto pr(58px);
+    margin: pr(30px) auto pr(50px);
+    padding: 0 $padding-size;
   }
-  .course-module{
+  .course-module {
     width: 100%;
     height: pr(879px);
     background: url("../images/bg_2.png") no-repeat center bottom;
@@ -319,6 +370,90 @@ html, body, div, a, p, span, ul, li{
     }
     .en {
       color: rgba(255, 255, 255, 0.12);
+    }
+  }
+
+  .swiper-container{
+    width: pr(520px);
+    height: pr(564px);
+    margin-bottom: pr(38px);
+    .swiper-wrapper{
+      width: 100%;
+      height: pr(400px);
+    }
+    .swiper-slide {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 0 pr(30px);
+      text-align: center;
+      background-size: 100% 100%;
+      margin-top: pr(120px);
+      .avatar {
+        width: pr(120px);
+        height: pr(120px);
+        margin-top: pr(-60px);
+      }
+      .name {
+        font-size: pr(30px);
+        line-height: pr(30px);
+        color: #333333;
+        margin-top: pr(18px);
+        span {
+          font-size: 14px;
+          color: #999999;
+        }
+      }
+      .honor {
+        margin-top: pr(15px);
+        font-size: pr(20px);
+        line-height: pr(20px);
+        strong {
+          display: block;
+          color: $txt-color;
+          font-weight: normal;
+        }
+        span {
+          display: block;
+          color: #999999;
+          margin-top: pr(10px);
+        }
+      }
+      .experience {
+        margin-top: 40px;
+        .item {
+          display: flex;
+          justify-content: space-between;
+          .icon {
+            width: pr(18px);
+            height: pr(18px);
+            background: url("../images/arrows.png") no-repeat;
+            margin-right: 6px;
+            margin-top: 5px;
+          }
+          p {
+            width: pr(422px);
+            line-height: 1.5;
+            text-align: left;
+            font-size: pr(20px);
+            color: #333333;
+          }
+        }
+      }
+    }
+    .swiper-pagination {
+      bottom: 0;
+      span {
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  .btn-module {
+    a {
+      border: 1px solid #ffffff;
+      color: #ffffff;
+      &.active {
+        border: 1px solid $bg-color;
+      }
     }
   }
 
@@ -389,10 +524,10 @@ html, body, div, a, p, span, ul, li{
         }
       }
 
-      .pointer{
+      .pointer {
         text-align: center;
         margin-top: pr(24px);
-        span{
+        span {
           @extend %in-b;
           width: pr(20px);
           height: pr(20px);
@@ -400,21 +535,222 @@ html, body, div, a, p, span, ul, li{
           border-radius: 50%;
           cursor: pointer;
           margin-right: pr(10px);
-          &.active{
+          &.active {
             width: pr(40px);
             border-radius: pr(10px);
           }
         }
       }
     }
-    .btn-module {
-      a {
-        border: 1px solid #ffffff;
-        color: #ffffff;
-        &.active {
-          border: 1px solid $bg-color;
+  }
+}
+
+/* 校友 */
+.schoolmate {
+  width: 100%;
+  //height: 976px;
+  padding-top: pr(50px);
+  .content {
+    width: pr(595px);
+    margin: pr(40px) auto;
+    .swiper-container{
+      height: pr(535px);
+      margin-bottom: pr(40px);
+      .swiper-slide{
+        &.swiper-slide-active{
+          margin-right: pr(10px);
+        }
+        img{
+          margin-bottom: pr(6px);
         }
       }
+      .swiper-pagination{
+        bottom: 0;
+      }
+    }
+  }
+  .text {
+    font-size: pr(24px);
+    color: #333333;
+    line-height: 1.5;
+    padding: 0 pr(40px);
+    margin-bottom: pr(40px);
+  }
+}
+
+/* 课程申请 */
+.application {
+  width: 100%;
+  height: pr(1300px);
+  background: url("../images/bg_4.png") no-repeat center;
+  background-size: 100% 100%;
+  //padding-top: pr(40px);
+  margin-top: pr(60px);
+  padding: pr(40px) $padding-size pr(47px);
+  .title-module {
+    .cn {
+      color: #ffffff;
+      font-weight: bold;
+    }
+    .en {
+      color: rgba(255, 255, 255, 0.16);
+    }
+  }
+  .process {
+    width: pr(460px);
+    margin-top: pr(40px);
+    padding-bottom: pr(60px);
+    float: right;
+    .process-title {
+      width: pr(170px);
+      height: pr(70px);
+      line-height: pr(70px);
+      background-color: $bg-color;
+      font-size: pr(24px);
+      color: #ffffff;
+      text-align: center;
+      margin-left: pr(148px);
+      margin-bottom: pr(29px);
+      position: relative;
+      &::after {
+        content: '';
+        height: 0;
+        width: 0;
+        border-top: pr(20px) solid $bg-color;
+        border-left: pr(10px) solid transparent;
+        border-right: pr(10px) solid transparent;
+        position: absolute;
+        bottom: pr(-20px);
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+    .step {
+      height: pr(136px);
+      border: solid 1px rgba(255, 255, 255, 0.6);
+      padding: pr(30px) pr(52px);
+      margin-top: pr(20px);
+      .number {
+        font-size: pr(72px);
+        line-height: pr(72px);
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.6);
+        float: left;
+      }
+      .step-detail{
+        float: right;
+        color: #ffffff;
+        .detail-title {
+          font-size: pr(30px);
+          line-height: pr(30px);
+          strong {
+            font-weight: bold;
+          }
+          span {
+            font-size: pr(24px);
+          }
+        }
+        .require {
+          margin-top: pr(10px);
+          @extend %clearfix;
+          span {
+            float: left;
+            color: #ffffff;
+            padding-left: pr(10px);
+            margin-right: pr(10px);
+            font-size: pr(24px);
+            line-height: pr(28px);
+            position: relative;
+            &:before {
+              display: block;
+              content: '';
+              width: pr(6px);
+              height: pr(6px);
+              border-radius: 50%;
+              background: #ffffff;
+              position: absolute;
+              left: 0;
+              top: 0;
+              bottom: 0;
+              margin: auto;
+            }
+          }
+        }
+      }
+
+    }
+  }
+  .apply-require {
+    clear: both;
+    margin-bottom: pr(30px);
+    .item {
+      color: #ffffff;
+      margin-bottom: pr(30px);
+      .item-title {
+        font-size: pr(34px);
+        line-height: pr(34px);
+        margin-bottom: pr(18px);
+      }
+      li {
+        font-size: pr(23px);
+        line-height: pr(23px);
+      }
+    }
+  }
+  .btn-module {
+    clear: both;
+    a {
+      border: 1px solid #ffffff;
+      color: #ffffff;
+      &.active {
+        border: 1px solid $bg-color;
+      }
+    }
+  }
+}
+
+.footer{
+  width: 100%;
+  height: pr(100px);
+  background-color: #333333;
+
+  color: rgba(250, 250, 250, 0.4);
+  text-align: center;
+  font-size: pr(20px);
+  line-height: pr(20px);
+  padding-top: pr(20px);
+  p{
+    margin-bottom: pr(10px);
+  }
+}
+
+.footer-fixed-site{
+  width: 100%;
+  height: pr(96px);
+}
+.footer-fixed{
+  width: pr(750px);
+  height: pr(96px);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  a{
+    width: 50%;
+    background-color: #3f92e6;
+    font-size: pr(30px);
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:first-child{
+      background-color: $bg-color;
+    }
+    span{
+      margin-left: pr(12px);
     }
   }
 }
