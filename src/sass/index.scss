@@ -754,3 +754,57 @@ li {
     }
   }
 }
+
+/* 遮罩层 */
+.mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 110;
+  //display: none;
+}
+
+/* 预约试听弹窗 */
+.popup{
+  width: pr(560px);
+  height: pr(820px);
+  background: url("../images/popup.png") no-repeat;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 120;
+  text-align: center;
+  //display: none;
+  .close{
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+  .btn{
+    width: 400px;
+    height: 46px;
+    position: absolute;
+    bottom: 47px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    a{
+      width: 200px;
+      height: 46px;
+      float: left;
+      &:nth-of-type(2){
+        float: right;
+      }
+    }
+  }
+}
