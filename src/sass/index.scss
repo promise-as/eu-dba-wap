@@ -94,7 +94,14 @@ li {
 }
 
 .banner {
-  @extend %in-b;
+  display: block;
+  width: 100%;
+  height: pr(380px);
+  background-repeat: no-repeat;
+  a{
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .title-module {
@@ -155,7 +162,7 @@ li {
     position: relative;
     .swiper-slide{
       &.swiper-slide-active{
-        margin-right: pr(10px);
+        //margin-right: pr(10px);
       }
     }
     .swiper-pagination {
@@ -300,6 +307,7 @@ li {
           width: pr(345px);
           height: pr(460px);
           position: relative;
+          background-size: 100% 100%;
           .school-name {
             width: pr(220px);
             height: pr(120px);
@@ -554,11 +562,13 @@ li {
     width: pr(595px);
     margin: pr(40px) auto;
     .swiper-container{
+      width: pr(595px);
       height: pr(535px);
-      margin-bottom: pr(40px);
+      //margin-bottom: pr(40px);
+      margin: 0 auto pr(40px);
       .swiper-slide{
         &.swiper-slide-active{
-          margin-right: pr(10px);
+          //margin-right: pr(10px);
         }
         img{
           margin-bottom: pr(6px);
@@ -764,7 +774,7 @@ li {
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
   z-index: 110;
-  //display: none;
+  display: none;
 }
 
 /* 预约试听弹窗 */
@@ -780,7 +790,7 @@ li {
   margin: auto;
   z-index: 120;
   text-align: center;
-  //display: none;
+  display: none;
   .close{
     display: block;
     width: 24px;
