@@ -8,7 +8,70 @@ li {
   list-style-type: none;
 }
 
-.swiper-pagination span, .about-us .content .btn, .btn-module a, .professor .content .area .pointer span {
+input[type="text"],
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+input[type="text"]::-webkit-input-placeholder,
+select::-webkit-input-placeholder {
+  color: #999;
+  font-size: inherit;
+}
+
+input[type="text"]:-moz-placeholder,
+select:-moz-placeholder {
+  color: #999;
+  font-size: inherit;
+}
+
+input[type="text"]::-moz-placeholder,
+select::-moz-placeholder {
+  color: #999;
+  font-size: inherit;
+}
+
+input[type="text"]:-ms-input-placeholder,
+select:-ms-input-placeholder {
+  color: #999;
+  font-size: inherit;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+input, textarea, select {
+  background-color: transparent;
+  font-family: '微软雅黑';
+}
+
+select {
+  border: none;
+  text-indent: 1em;
+}
+
+option {
+  text-indent: 1em;
+  font-family: '微软雅黑';
+}
+
+input[type="text"],
+select {
+  border: none;
+  text-indent: 1em;
+}
+
+input[type="submit"] {
+  border: none;
+}
+
+.banner a, .swiper-pagination span, .about-us .content .btn, .btn-module a, .professor .content .area .pointer span {
   display: inline-block;
   *zoom: 1;
   *display: inline;
@@ -84,7 +147,7 @@ li {
 .header .header-right .icon {
   width: 0.66667rem;
   height: 0.66667rem;
-  background: url("../images/tel.png") no-repeat center;
+  background: url("https://img.thea.cn/public/platform/thea/201907/hbj/EU-DBA-wap/images/tel.png") no-repeat center;
   background-size: 100% 100%;
   margin-right: 7px;
 }
@@ -114,6 +177,7 @@ li {
   width: 100%;
   height: 5.06667rem;
   background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .banner a {
@@ -180,9 +244,15 @@ li {
 }
 
 .about-us .swiper-container {
+  width: 100%;
   height: 6.73333rem;
-  margin: 0.53333rem 0.13333rem 0;
+  margin: 0.53333rem 0 0;
   position: relative;
+}
+
+.about-us .swiper-container .swiper-slide img {
+  width: 100%;
+  height: 100%;
 }
 
 .about-us .swiper-container .swiper-pagination {
@@ -191,6 +261,10 @@ li {
 
 .about-us .swiper-container .swiper-pagination span {
   background-color: #ffffff;
+}
+
+.about-us .swiper-container .swiper-pagination span.swiper-pagination-bullet-active {
+  background-color: #167e48;
 }
 
 .about-us .content {
@@ -259,7 +333,7 @@ li {
 .btn-module a {
   width: 3.46667rem;
   height: 0.74667rem;
-  line-height: 48px;
+  line-height: 0.74667rem;
   border-radius: 0.37333rem;
   border: solid 1px #f0552f;
   font-size: 0.34667rem;
@@ -319,6 +393,31 @@ li {
   margin-top: 0.4rem;
 }
 
+.course-advantage .content .advantage li:first-child img {
+  width: 1.33333rem;
+  height: 1.33333rem;
+}
+
+.course-advantage .content .advantage li:nth-of-type(2) img {
+  width: 1.04rem;
+  height: 1.32rem;
+}
+
+.course-advantage .content .advantage li:nth-of-type(3) img {
+  width: 1.21333rem;
+  height: 1.33333rem;
+}
+
+.course-advantage .content .advantage li:nth-of-type(4) img {
+  width: 1.29333rem;
+  height: 1.33333rem;
+}
+
+.course-advantage .content .advantage li:nth-of-type(5) img {
+  width: 1.33333rem;
+  height: 1.30667rem;
+}
+
 .course-advantage .content .text {
   color: #333333;
   font-size: 0.34667rem;
@@ -330,7 +429,7 @@ li {
 .campuses {
   width: 100%;
   height: 10.66667rem;
-  background: url("../images/bg_1.png") no-repeat center;
+  background: url("https://img.thea.cn/public/platform/thea/201907/hbj/EU-DBA-wap/images/bg_1.png") no-repeat center;
   background-size: 100% 100%;
   padding: 0.8rem 0.26667rem 0.62667rem;
 }
@@ -405,14 +504,15 @@ li {
   color: #333333;
   font-size: 0.34667rem;
   text-align: center;
-  margin: 0.4rem auto 0.66667rem;
+  margin: 0.4rem auto 0.26667rem;
   padding: 0 0.26667rem;
 }
 
 .course-introduce .course-module {
   width: 100%;
   height: 11.72rem;
-  background: url("../images/bg_2.png") no-repeat center bottom;
+  background: url("https://img.thea.cn/public/platform/thea/201907/hbj/EU-DBA-wap/images/bg_2.png") no-repeat;
+  background-size: 100% 100%;
 }
 
 .course-introduce .btn-module {
@@ -423,7 +523,7 @@ li {
 .professor {
   width: 100%;
   height: 10.66667rem;
-  background: url("../images/bg_3.png") no-repeat center;
+  background: url("https://img.thea.cn/public/platform/thea/201907/hbj/EU-DBA-wap/images/bg_3.png") no-repeat center;
   background-size: 100% 100%;
   padding-top: 0.53333rem;
   margin-top: 0.8rem;
@@ -439,14 +539,14 @@ li {
 }
 
 .professor .swiper-container {
-  width: 6.93333rem;
-  height: 7.52rem;
-  margin-bottom: 0.50667rem;
+  width: 8rem;
+  height: 7.73333rem;
+  margin-bottom: 0.26667rem;
 }
 
 .professor .swiper-container .swiper-wrapper {
   width: 100%;
-  height: 5.33333rem;
+  height: 5.86667rem;
 }
 
 .professor .swiper-container .swiper-slide {
@@ -454,31 +554,31 @@ li {
   padding: 0 0.4rem;
   text-align: center;
   background-size: 100% 100%;
-  margin-top: 1.6rem;
+  margin-top: 1.33333rem;
 }
 
 .professor .swiper-container .swiper-slide .avatar {
-  width: 1.6rem;
-  height: 1.6rem;
-  margin-top: -0.8rem;
+  width: 1.86667rem;
+  height: 1.86667rem;
+  margin-top: -0.93333rem;
 }
 
 .professor .swiper-container .swiper-slide .name {
-  font-size: 0.4rem;
-  line-height: 0.4rem;
+  font-size: 0.48rem;
+  line-height: 0.48rem;
   color: #333333;
-  margin-top: 0.24rem;
+  margin-top: 0.13333rem;
 }
 
 .professor .swiper-container .swiper-slide .name span {
-  font-size: 14px;
+  font-size: 0.37333rem;
   color: #999999;
 }
 
 .professor .swiper-container .swiper-slide .honor {
   margin-top: 0.2rem;
-  font-size: 0.26667rem;
-  line-height: 0.26667rem;
+  font-size: 0.4rem;
+  line-height: 0.4rem;
 }
 
 .professor .swiper-container .swiper-slide .honor strong {
@@ -494,7 +594,7 @@ li {
 }
 
 .professor .swiper-container .swiper-slide .experience {
-  margin-top: 40px;
+  margin-top: 0.4rem;
 }
 
 .professor .swiper-container .swiper-slide .experience .item {
@@ -509,16 +609,17 @@ li {
 .professor .swiper-container .swiper-slide .experience .item .icon {
   width: 0.24rem;
   height: 0.24rem;
-  background: url("../images/arrows.png") no-repeat;
-  margin-right: 6px;
-  margin-top: 5px;
+  background: url("https://img.thea.cn/public/platform/thea/201907/hbj/EU-DBA-wap/images/arrows.png") no-repeat;
+  background-size: 100% 100%;
+  margin-right: 0.13333rem;
+  margin-top: 0.06667rem;
 }
 
 .professor .swiper-container .swiper-slide .experience .item p {
-  width: 5.62667rem;
+  width: 6.66667rem;
   line-height: 1.5;
   text-align: left;
-  font-size: 0.26667rem;
+  font-size: 0.29333rem;
   color: #333333;
 }
 
@@ -528,6 +629,10 @@ li {
 
 .professor .swiper-container .swiper-pagination span {
   background-color: #ffffff;
+}
+
+.professor .swiper-container .swiper-pagination span.swiper-pagination-bullet-active {
+  background-color: #f0552f;
 }
 
 .professor .btn-module a {
@@ -607,7 +712,7 @@ li {
 .professor .content .area li .experience .item .icon {
   width: 0.24rem;
   height: 0.24rem;
-  background: url("../images/arrows.png") no-repeat;
+  background: url("https://img.thea.cn/public/platform/thea/201907/hbj/EU-DBA-wap/images/arrows.png") no-repeat;
   margin-right: 6px;
   margin-top: 5px;
 }
@@ -646,18 +751,49 @@ li {
 }
 
 .schoolmate .content {
-  width: 7.93333rem;
+  width: 100%;
   margin: 0.53333rem auto;
 }
 
 .schoolmate .content .swiper-container {
-  width: 7.93333rem;
+  width: 100%;
   height: 7.13333rem;
   margin: 0 auto 0.53333rem;
+  text-align: center;
 }
 
 .schoolmate .content .swiper-container .swiper-slide img {
   margin-bottom: 0.08rem;
+}
+
+.schoolmate .content .swiper-container .swiper-slide:nth-of-type(1) img:first-child {
+  width: 4rem;
+  height: 3.2rem;
+}
+
+.schoolmate .content .swiper-container .swiper-slide:nth-of-type(1) img:nth-of-type(2) {
+  width: 3.8rem;
+  height: 3.2rem;
+}
+
+.schoolmate .content .swiper-container .swiper-slide:nth-of-type(1) img:nth-of-type(3) {
+  width: 7.93333rem;
+  height: 3.2rem;
+}
+
+.schoolmate .content .swiper-container .swiper-slide:nth-of-type(2) img:first-child {
+  width: 7.93333rem;
+  height: 3.2rem;
+}
+
+.schoolmate .content .swiper-container .swiper-slide:nth-of-type(2) img:nth-of-type(2) {
+  width: 4rem;
+  height: 3.2rem;
+}
+
+.schoolmate .content .swiper-container .swiper-slide:nth-of-type(2) img:nth-of-type(3) {
+  width: 3.8rem;
+  height: 3.2rem;
 }
 
 .schoolmate .content .swiper-container .swiper-pagination {
@@ -676,7 +812,7 @@ li {
 .application {
   width: 100%;
   height: 17.33333rem;
-  background: url("../images/bg_4.png") no-repeat center;
+  background: url("https://img.thea.cn/public/platform/thea/201907/hbj/EU-DBA-wap/images/bg_4.png") no-repeat center;
   background-size: 100% 100%;
   margin-top: 0.8rem;
   padding: 0.53333rem 0.26667rem 0.62667rem;
@@ -728,7 +864,7 @@ li {
 .application .process .step {
   height: 1.81333rem;
   border: solid 1px rgba(255, 255, 255, 0.6);
-  padding: 0.4rem 0.69333rem;
+  padding: 0.4rem 0.13333rem 0.4rem 0.66667rem;
   margin-top: 0.26667rem;
 }
 
@@ -738,11 +874,13 @@ li {
   font-weight: bold;
   color: rgba(255, 255, 255, 0.6);
   float: left;
+  margin-right: 0.64rem;
 }
 
 .application .process .step .step-detail {
-  float: right;
+  float: left;
   color: #ffffff;
+  text-align: left;
 }
 
 .application .process .step .step-detail .detail-title {
@@ -788,7 +926,7 @@ li {
 
 .application .apply-require {
   clear: both;
-  margin-bottom: 0.4rem;
+  padding-bottom: 0.4rem;
 }
 
 .application .apply-require .item {
@@ -798,13 +936,13 @@ li {
 
 .application .apply-require .item .item-title {
   font-size: 0.45333rem;
-  line-height: 0.45333rem;
+  line-height: 0.48rem;
   margin-bottom: 0.24rem;
 }
 
 .application .apply-require .item li {
   font-size: 0.30667rem;
-  line-height: 0.30667rem;
+  line-height: 0.37333rem;
 }
 
 .application .btn-module {
@@ -837,7 +975,7 @@ li {
 
 .footer-fixed-site {
   width: 100%;
-  height: 1.28rem;
+  height: 1.26667rem;
 }
 
 .footer-fixed {
@@ -871,8 +1009,18 @@ li {
           align-items: center;
 }
 
+.footer-fixed a img {
+  width: 0.6rem;
+  height: 0.52rem;
+}
+
 .footer-fixed a:first-child {
   background-color: #f0552f;
+}
+
+.footer-fixed a:first-child img {
+  width: 0.52rem;
+  height: 0.49333rem;
 }
 
 .footer-fixed a span {
@@ -895,7 +1043,8 @@ li {
 .popup {
   width: 7.46667rem;
   height: 10.93333rem;
-  background: url("../images/popup.png") no-repeat;
+  background: url("https://img.thea.cn/public/platform/thea/201907/hbj/EU-DBA-wap/images/popup.png") no-repeat;
+  background-size: 100% 100%;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -904,35 +1053,57 @@ li {
   margin: auto;
   z-index: 120;
   text-align: center;
+  padding-top: 0.53333rem;
   display: none;
 }
 
 .popup .close {
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 1.06667rem;
+  height: 1.06667rem;
   position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-}
-
-.popup .btn {
-  width: 400px;
-  height: 46px;
-  position: absolute;
-  bottom: 47px;
+  bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
+  cursor: pointer;
 }
 
-.popup .btn a {
-  width: 200px;
-  height: 46px;
-  float: left;
+.popup .title {
+  padding: 0 1.6rem;
+  font-size: 0.48rem;
+  line-height: 0.64rem;
+  color: #ffffff;
+  margin-bottom: 0.93333rem;
 }
 
-.popup .btn a:nth-of-type(2) {
-  float: right;
+.popup .sign-in {
+  padding: 0 0.53333rem;
+}
+
+.popup .sign-in input {
+  width: 100%;
+  height: 1.04rem;
+  line-height: 1.04rem;
+  margin-bottom: 0.4rem;
+  background-color: #f8f8f8;
+  border-radius: 0.08rem;
+  border: solid 1px #cccccc;
+  font-size: 0.37333rem;
+}
+
+.popup .sign-in input[type="submit"] {
+  background-color: #f0552f;
+  border: solid 1px #f0552f;
+  color: #ffffff;
+  font-size: 0.42667rem;
+}
+
+.popup .sign-in .hint {
+  font-size: 0.29333rem;
+  color: #999999;
+}
+
+.popup .sign-in .hint strong {
+  color: #ec5234;
 }

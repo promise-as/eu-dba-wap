@@ -16,6 +16,60 @@ li {
   list-style-type: none;
 }
 
+input[type="text"],
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none; // 去除safari浏览器的内阴影
+  &::-webkit-input-placeholder {
+    color: #999;
+    font-size: inherit;
+  }
+  &:-moz-placeholder {
+    color: #999;
+    font-size: inherit;
+  }
+  &::-moz-placeholder {
+    color: #999;
+    font-size: inherit;
+  }
+  &:-ms-input-placeholder {
+    color: #999;
+    font-size: inherit;
+  }
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+input, textarea, select {
+  background-color: transparent;
+  font-family: '微软雅黑';
+}
+
+select {
+  border: none;
+  text-indent: 1em;
+}
+
+option {
+  text-indent: 1em;
+  font-family: '微软雅黑';
+}
+
+input[type='text'], select {
+  border: none;
+  text-indent: 1em;
+}
+
+input[type="submit"] {
+  border: none;
+}
+
 %in-b {
   display: inline-block;
   *zoom: 1;
@@ -74,7 +128,7 @@ li {
     .icon {
       width: pr(50px);
       height: pr(50px);
-      background: url("../images/tel.png") no-repeat center;
+      background: url("https://img.thea.cn/public/platform/thea/201907/hbj/EU-DBA-wap/images/tel.png") no-repeat center;
       background-size: 100% 100%;
       margin-right: 7px;
     }
@@ -98,7 +152,9 @@ li {
   width: 100%;
   height: pr(380px);
   background-repeat: no-repeat;
+  background-size: 100% 100%;
   a{
+    @extend %in-b;
     width: 100%;
     height: 100%;
   }
@@ -157,18 +213,23 @@ li {
 .about-us {
   padding-top: pr(59px);
   .swiper-container {
+    width: 100%;
     height: pr(505px);
-    margin: pr(40px) pr(10px) 0;
+    margin: pr(40px) 0 0;
     position: relative;
     .swiper-slide{
-      &.swiper-slide-active{
-        //margin-right: pr(10px);
+      img{
+        width: 100%;
+        height: 100%;
       }
     }
     .swiper-pagination {
       bottom: pr(40px);
       span {
         background-color: #ffffff;
+        &.swiper-pagination-bullet-active {
+          background-color: #167e48;
+        }
       }
     }
   }
@@ -232,7 +293,7 @@ li {
     @extend %in-b;
     width: pr(260px);
     height: pr(56px);
-    line-height: 48px;
+    line-height: pr(56px);
     border-radius: pr(28px);
     border: solid 1px $bg-color;
     font-size: pr(26px);
@@ -276,6 +337,36 @@ li {
           color: #333333;
           margin-top: pr(30px);
         }
+        &:first-child{
+          img{
+            width: pr(100px);
+            height: pr(100px);
+          }
+        }
+        &:nth-of-type(2){
+          img{
+            width: pr(78px);
+            height: pr(99px);
+          }
+        }
+        &:nth-of-type(3){
+          img{
+            width: pr(91px);
+            height: pr(100px);
+          }
+        }
+        &:nth-of-type(4){
+          img{
+            width: pr(97px);
+            height: pr(100px);
+          }
+        }
+        &:nth-of-type(5){
+          img{
+            width: pr(100px);
+            height: pr(98px);
+          }
+        }
       }
     }
     .text {
@@ -292,7 +383,7 @@ li {
 .campuses {
   width: 100%;
   height: pr(800px);
-  background: url("../images/bg_1.png") no-repeat center;
+  background: url("https://img.thea.cn/public/platform/thea/201907/hbj/EU-DBA-wap/images/bg_1.png") no-repeat center;
   background-size: 100% 100%;
   padding: pr(60px) $padding-size pr(47px);
   .content {
@@ -350,13 +441,14 @@ li {
     color: #333333;
     font-size: pr(26px);
     text-align: center;
-    margin: pr(30px) auto pr(50px);
+    margin: pr(30px) auto pr(20px);
     padding: 0 $padding-size;
   }
   .course-module {
     width: 100%;
     height: pr(879px);
-    background: url("../images/bg_2.png") no-repeat center bottom;
+    background: url("https://img.thea.cn/public/platform/thea/201907/hbj/EU-DBA-wap/images/bg_2.png") no-repeat;
+    background-size: 100% 100%;
   }
   .btn-module {
     margin-top: pr(50px);
@@ -367,7 +459,7 @@ li {
 .professor {
   width: 100%;
   height: pr(800px);
-  background: url("../images/bg_3.png") no-repeat center;
+  background: url("https://img.thea.cn/public/platform/thea/201907/hbj/EU-DBA-wap/images/bg_3.png") no-repeat center;
   background-size: 100% 100%;
   padding-top: pr(40px);
   margin-top: pr(60px);
@@ -382,38 +474,38 @@ li {
   }
 
   .swiper-container{
-    width: pr(520px);
-    height: pr(564px);
-    margin-bottom: pr(38px);
+    width: pr(600px);
+    height: pr(580px);
+    margin-bottom: pr(20px);
     .swiper-wrapper{
       width: 100%;
-      height: pr(400px);
+      height: pr(440px);
     }
     .swiper-slide {
       background-color: rgba(255, 255, 255, 0.9);
       padding: 0 pr(30px);
       text-align: center;
       background-size: 100% 100%;
-      margin-top: pr(120px);
+      margin-top: pr(100px);
       .avatar {
-        width: pr(120px);
-        height: pr(120px);
-        margin-top: pr(-60px);
+        width: pr(140px);
+        height: pr(140px);
+        margin-top: pr(-70px);
       }
       .name {
-        font-size: pr(30px);
-        line-height: pr(30px);
+        font-size: pr(36px);
+        line-height: pr(36px);
         color: #333333;
-        margin-top: pr(18px);
+        margin-top: pr(10px);
         span {
-          font-size: 14px;
+          font-size: pr(28px);
           color: #999999;
         }
       }
       .honor {
         margin-top: pr(15px);
-        font-size: pr(20px);
-        line-height: pr(20px);
+        font-size: pr(30px);
+        line-height: pr(30px);
         strong {
           display: block;
           color: $txt-color;
@@ -426,22 +518,23 @@ li {
         }
       }
       .experience {
-        margin-top: 40px;
+        margin-top: pr(30px);
         .item {
           display: flex;
           justify-content: space-between;
           .icon {
             width: pr(18px);
             height: pr(18px);
-            background: url("../images/arrows.png") no-repeat;
-            margin-right: 6px;
-            margin-top: 5px;
+            background: url("https://img.thea.cn/public/platform/thea/201907/hbj/EU-DBA-wap/images/arrows.png") no-repeat;
+            background-size: 100% 100%;
+            margin-right: pr(10px);
+            margin-top: pr(5px);
           }
           p {
-            width: pr(422px);
+            width: pr(500px);
             line-height: 1.5;
             text-align: left;
-            font-size: pr(20px);
+            font-size: pr(22px);
             color: #333333;
           }
         }
@@ -451,6 +544,9 @@ li {
       bottom: 0;
       span {
         background-color: #ffffff;
+        &.swiper-pagination-bullet-active {
+          background-color: $bg-color;
+        }
       }
     }
   }
@@ -517,7 +613,7 @@ li {
             .icon {
               width: pr(18px);
               height: pr(18px);
-              background: url("../images/arrows.png") no-repeat;
+              background: url("https://img.thea.cn/public/platform/thea/201907/hbj/EU-DBA-wap/images/arrows.png") no-repeat;
               margin-right: 6px;
               margin-top: 5px;
             }
@@ -556,22 +652,52 @@ li {
 /* 校友 */
 .schoolmate {
   width: 100%;
-  //height: 976px;
   padding-top: pr(50px);
   .content {
-    width: pr(595px);
+    width: 100%;
     margin: pr(40px) auto;
     .swiper-container{
-      width: pr(595px);
+      width: 100%;
       height: pr(535px);
-      //margin-bottom: pr(40px);
       margin: 0 auto pr(40px);
+      text-align: center;
       .swiper-slide{
         &.swiper-slide-active{
-          //margin-right: pr(10px);
         }
         img{
           margin-bottom: pr(6px);
+        }
+        &:nth-of-type(1){
+          img{
+            &:first-child{
+              width: pr(300px);
+              height: pr(240px);
+            }
+            &:nth-of-type(2){
+              width: pr(285px);
+              height: pr(240px);
+            }
+            &:nth-of-type(3){
+              width: pr(595px);
+              height: pr(240px);
+            }
+          }
+        }
+        &:nth-of-type(2){
+          img{
+            &:first-child{
+              width: pr(595px);
+              height: pr(240px);
+            }
+            &:nth-of-type(2){
+              width: pr(300px);
+              height: pr(240px);
+            }
+            &:nth-of-type(3){
+              width: pr(285px);
+              height: pr(240px);
+            }
+          }
         }
       }
       .swiper-pagination{
@@ -592,9 +718,8 @@ li {
 .application {
   width: 100%;
   height: pr(1300px);
-  background: url("../images/bg_4.png") no-repeat center;
+  background: url("https://img.thea.cn/public/platform/thea/201907/hbj/EU-DBA-wap/images/bg_4.png") no-repeat center;
   background-size: 100% 100%;
-  //padding-top: pr(40px);
   margin-top: pr(60px);
   padding: pr(40px) $padding-size pr(47px);
   .title-module {
@@ -639,7 +764,7 @@ li {
     .step {
       height: pr(136px);
       border: solid 1px rgba(255, 255, 255, 0.6);
-      padding: pr(30px) pr(52px);
+      padding: pr(30px) pr(10px) pr(30px) pr(50px);
       margin-top: pr(20px);
       .number {
         font-size: pr(72px);
@@ -647,10 +772,12 @@ li {
         font-weight: bold;
         color: rgba(255, 255, 255, 0.6);
         float: left;
+        margin-right: pr(48px);
       }
       .step-detail{
-        float: right;
+        float: left;
         color: #ffffff;
+        text-align: left;
         .detail-title {
           font-size: pr(30px);
           line-height: pr(30px);
@@ -693,18 +820,18 @@ li {
   }
   .apply-require {
     clear: both;
-    margin-bottom: pr(30px);
+    padding-bottom: pr(30px);
     .item {
       color: #ffffff;
       margin-bottom: pr(30px);
       .item-title {
         font-size: pr(34px);
-        line-height: pr(34px);
+        line-height: pr(36px);
         margin-bottom: pr(18px);
       }
       li {
         font-size: pr(23px);
-        line-height: pr(23px);
+        line-height: pr(28px);
       }
     }
   }
@@ -737,7 +864,7 @@ li {
 
 .footer-fixed-site{
   width: 100%;
-  height: pr(96px);
+  height: pr(95px);
 }
 .footer-fixed{
   width: pr(750px);
@@ -756,8 +883,16 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+    img{
+      width: pr(45px);
+      height: pr(39px);
+    }
     &:first-child{
       background-color: $bg-color;
+      img{
+        width: pr(39px);
+        height: pr(37px);
+      }
     }
     span{
       margin-left: pr(12px);
@@ -781,7 +916,8 @@ li {
 .popup{
   width: pr(560px);
   height: pr(820px);
-  background: url("../images/popup.png") no-repeat;
+  background: url("https://img.thea.cn/public/platform/thea/201907/hbj/EU-DBA-wap/images/popup.png") no-repeat;
+  background-size: 100% 100%;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -790,30 +926,49 @@ li {
   margin: auto;
   z-index: 120;
   text-align: center;
+  padding-top: pr(40px);
   display: none;
   .close{
     display: block;
-    width: 24px;
-    height: 24px;
+    width: pr(80px);
+    height: pr(80px);
     position: absolute;
-    top: 0;
-    right: 0;
-    cursor: pointer;
-  }
-  .btn{
-    width: 400px;
-    height: 46px;
-    position: absolute;
-    bottom: 47px;
+    bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
-    a{
-      width: 200px;
-      height: 46px;
-      float: left;
-      &:nth-of-type(2){
-        float: right;
+    cursor: pointer;
+  }
+  .title{
+    padding: 0 pr(120px);
+    font-size: pr(36px);
+    line-height: pr(48px);
+    color: #ffffff;
+    margin-bottom: pr(70px);
+  }
+  .sign-in{
+    padding: 0 pr(40px);
+    input{
+      width: 100%;
+      height: pr(78px);
+      line-height: pr(78px);
+      margin-bottom: pr(30px);
+      background-color: #f8f8f8;
+      border-radius: pr(6px);
+      border: solid 1px #cccccc;
+      font-size: pr(28px);
+    }
+    input[type="submit"]{
+      background-color: $bg-color;
+      border: solid 1px $bg-color;
+      color: #ffffff;
+      font-size: pr(32px);
+    }
+    .hint{
+      font-size: pr(22px);
+      color: #999999;
+      strong{
+        color: #ec5234;
       }
     }
   }
